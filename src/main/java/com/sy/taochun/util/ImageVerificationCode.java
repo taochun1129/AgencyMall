@@ -1,4 +1,5 @@
 package com.sy.taochun.util;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -121,13 +122,13 @@ public class ImageVerificationCode {
     }
 
     /**
-     *  将验证码图片写出的方法
+     * 将验证码图片写出的方法
+     *
      * @param image
      * @param out
      * @throws IOException
      */
-    public static void output(BufferedImage image, OutputStream out) throws IOException
-    {
+    public static void output(BufferedImage image, OutputStream out) throws IOException {
         ImageIO.write(image, "JPEG", out);
     }
 }

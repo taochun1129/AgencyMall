@@ -30,13 +30,14 @@ public class ShiroController {
 
     /**
      * 登录认证
+     *
      * @param user
      * @param captcha
      * @param session
      * @return
      */
     @RequestMapping(value = "/login.do")
-    public BaseResult login(AuUser user, String captcha,HttpSession session) {
+    public BaseResult login(AuUser user, String captcha, HttpSession session) {
 
 //        System.out.println(user.getUsername());
 //        System.out.println(user.getPassword());

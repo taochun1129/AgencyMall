@@ -23,7 +23,7 @@ public class SpringShiroConfig {
      * 配置以下两个bean(DefaultAdvisorAutoProxyCreator和AuthorizationAttributeSourceAdvisor)
      */
     @Bean
-    public DefaultAdvisorAutoProxyCreator advisorAutoProxyCreator(){
+    public DefaultAdvisorAutoProxyCreator advisorAutoProxyCreator() {
         DefaultAdvisorAutoProxyCreator advisorAutoProxyCreator = new DefaultAdvisorAutoProxyCreator();
         advisorAutoProxyCreator.setProxyTargetClass(true);
         return advisorAutoProxyCreator;
@@ -41,9 +41,8 @@ public class SpringShiroConfig {
     }
 
 
-
     @Bean
-    public Realm createRealm(@Autowired DataSource dataSource){
+    public Realm createRealm(@Autowired DataSource dataSource) {
 
         MyJdbcRealm realm = new MyJdbcRealm();
         realm.setDataSource(dataSource);
@@ -54,12 +53,12 @@ public class SpringShiroConfig {
     //Filter工厂，设置对应的过滤条件和跳转条件
     @Bean
     public ShiroFilterFactoryBean shiroFilterFactoryBean(@Autowired SecurityManager securityManager) {
-        System.out.println( "shiro Filter....." );
+        System.out.println("shiro Filter.....");
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         shiroFilterFactoryBean.setLoginUrl("http://127.0.0.1:8080/login.html");
         //拦截器.
-        Map<String,String> filterChainDefinitionMap = new LinkedHashMap<String,String>();
+        Map<String, String> filterChainDefinitionMap = new LinkedHashMap<String, String>();
 
         // 配置不会被拦截的链接 顺序判断
         filterChainDefinitionMap.put("/login.do", "anon");

@@ -15,7 +15,7 @@ import java.awt.image.BufferedImage;
 public class CaptchaController {
 
     @RequestMapping("/captcha.do")
-    public void writeImg(HttpServletResponse response, HttpSession session) throws Exception{
+    public void writeImg(HttpServletResponse response, HttpSession session) throws Exception {
         //1.获得验证图片
         ImageVerificationCode helper = new ImageVerificationCode();
         BufferedImage image = helper.getImage();//写到浏览器

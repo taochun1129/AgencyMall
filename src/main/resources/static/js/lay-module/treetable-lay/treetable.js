@@ -18,23 +18,23 @@ layui.define(['layer', 'table'], function (exports) {
 //                  treetable.init(param, res.data);
 //              });
 
-  			$.ajax({
-	                url:param.url,
-	                type:"post",
-	                data:param.where,
-	                dataType:"json",
-	                xhrFields:{
-	                    // 发送 AJAX 请求时带上 cookie
-	                    withCredentials:true
-	                },
-	                success:function (rec) {
-	                    if (rec.code==0){
-	                       treetable.init(param, rec.data);
-	                    }else{
-	                        layer.msg(rec.msg);
-	                    }
-	                }
-	            })
+                $.ajax({
+                    url: param.url,
+                    type: "post",
+                    data: param.where,
+                    dataType: "json",
+                    xhrFields: {
+                        // 发送 AJAX 请求时带上 cookie
+                        withCredentials: true
+                    },
+                    success: function (rec) {
+                        if (rec.code == 0) {
+                            treetable.init(param, rec.data);
+                        } else {
+                            layer.msg(rec.msg);
+                        }
+                    }
+                })
             }
         },
         // 渲染表格

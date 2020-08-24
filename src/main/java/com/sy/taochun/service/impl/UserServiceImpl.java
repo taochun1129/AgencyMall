@@ -16,7 +16,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public AuUser findByUsername(String username) throws Exception {
-        System.out.println("username："+username);
+        System.out.println("username：" + username);
         return mapper.findByUsername(username);
     }
 }

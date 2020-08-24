@@ -21,7 +21,7 @@ public class Account_detailController {
 
     @RequiresPermissions("/account/find.do")
     @RequestMapping("/account.do")
-    public BaseResult findFunc(Integer id)throws Exception{
+    public BaseResult findFunc(Integer id) throws Exception {
 
         Account_detail byId = service.findById(id);
         BaseResult baseResult = new BaseResult();

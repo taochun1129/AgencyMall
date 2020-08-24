@@ -19,6 +19,7 @@ public interface Account_detailService {
 
     /**
      * 按roleId查询所有func
+     *
      * @param id
      * @return
      * @throws Exception
@@ -27,13 +28,16 @@ public interface Account_detailService {
 
     /**
      * 根据角色删除权限
+     *
      * @param roleId
      * @return
      * @throws Exception
      */
     Integer removeFuncByRoleId(Integer roleId) throws Exception;
+
     /**
      * 根所角色增加权限
+     *
      * @param roleId
      * @param funcIds
      * @return

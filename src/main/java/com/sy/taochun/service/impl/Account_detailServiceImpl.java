@@ -18,7 +18,7 @@ public class Account_detailServiceImpl implements Account_detailService {
     private Account_detailMapper mapper;
 
     @Override
-    public void save(Account_detail detail ) throws Exception {
+    public void save(Account_detail detail) throws Exception {
         mapper.save(detail);
     }
 

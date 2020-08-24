@@ -9,6 +9,6 @@ public class Constant {
     /**
      * 无效会员
      */
-    public final static Integer ROLE_TYPE_INVALID=0;
+    public final static Integer ROLE_TYPE_INVALID = 0;
 
 }
